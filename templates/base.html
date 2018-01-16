@@ -1,13 +1,30 @@
 
 <!doctype html>
 <html>
+    <nav>
+        <a href='blog'>Main Blog Page</a>
+        <a href='newpost'>Add a New Blog Entry</a>
+    </nav>
+
     <head>
+        <style>
+            .error{
+                color: red;
+            }
+            h1 {
+                text-align:center;
+                font-size: 40px;
+            }
+            nav>a {
+                background-color: rgb(252, 252, 98);
+                text-align: center; 
+                text-decoration: none;
+            }
+        </style>
         <title>{{title}}</title>
     </head>
-<body>
-
-    {% block content %}
-    {% endblock %}
-
-</body>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
 </html>
