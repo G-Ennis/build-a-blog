@@ -26,7 +26,7 @@ def index():
 
 @app.route('/blog')
 def blog():
-    blogs = Blog.query.all()
+    blogs = Blog.query.order_by(Blog.id.desc()).all()
     return render_template('blog.html', blogs=blogs)
 
 
